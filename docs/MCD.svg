@@ -1,0 +1,196 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="562" height="577" view_box="0 0 562 577"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Mon, 02 May 2022 10:16:40</desc>
+
+<rect id="frame" x="0" y="0" width="562" height="577" fill="#f7f7f7" stroke="none" stroke-width="0"/>
+
+<!-- Association ranking -->
+<line x1="340" y1="145" x2="209" y2="145" stroke="#e08214" stroke-width="2"/>
+<text x="245" y="137.0" fill="#542788" font-family="Verdana" font-size="12">0,1</text>
+<line x1="77" y1="145" x2="209" y2="145" stroke="#e08214" stroke-width="2"/>
+<text x="150" y="162.0" fill="#542788" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-ranking">
+	<path d="M 225 120 a 14 14 90 0 1 14 14 V 145 h -60 V 134 a 14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+	<path d="M 239 145.0 v 11 a 14 14 90 0 1 -14 14 H 193 a 14 14 90 0 1 -14 -14 V 145.0 H 60" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+	<rect x="179" y="120" width="60" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+	<line x1="179" y1="145" x2="239" y2="145" stroke="#e08214" stroke-width="1"/>
+	<text x="186" y="137.7" fill="#000000" font-family="Verdana" font-size="12">ranking</text>
+</g>
+
+<!-- Association compose -->
+<line x1="340" y1="145" x2="209" y2="331" stroke="#e08214" stroke-width="2"/>
+<text x="245" y="240.331005507" fill="#542788" font-family="Verdana" font-size="12">0,1</text>
+<line x1="209" y1="483" x2="209" y2="331" stroke="#e08214" stroke-width="2"/>
+<text x="214.0" y="390" fill="#542788" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-compose">
+	<path d="M 229 306 a 14 14 90 0 1 14 14 V 331 h -68 V 320 a 14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+	<path d="M 243 331.0 v 11 a 14 14 90 0 1 -14 14 H 189 a 14 14 90 0 1 -14 -14 V 331.0 H 68" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+	<rect x="175" y="306" width="68" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+	<line x1="175" y1="331" x2="243" y2="331" stroke="#e08214" stroke-width="1"/>
+	<text x="182" y="323.7" fill="#000000" font-family="Verdana" font-size="12">compose</text>
+</g>
+
+<!-- Association on -->
+<line x1="497" y1="145" x2="497" y2="331" stroke="#e08214" stroke-width="2"/>
+<text x="502.0" y="264" fill="#542788" font-family="Verdana" font-size="12">0,N</text>
+<line x1="497" y1="483" x2="497" y2="331" stroke="#e08214" stroke-width="2"/>
+<text x="502.0" y="441" fill="#542788" font-family="Verdana" font-size="12">0,1</text>
+<g id="association-on">
+	<path d="M 498 306 a 14 14 90 0 1 14 14 V 331 h -30 V 320 a 14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+	<path d="M 512 331.0 v 11 a 14 14 90 0 1 -14 14 H 496 a 14 14 90 0 1 -14 -14 V 331.0 H 30" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+	<rect x="482" y="306" width="30" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+	<line x1="482" y1="331" x2="512" y2="331" stroke="#e08214" stroke-width="1"/>
+	<text x="489" y="323.7" fill="#000000" font-family="Verdana" font-size="12">on</text>
+</g>
+
+<!-- Association contest -->
+<line x1="340" y1="145" x2="340" y2="331" stroke="#e08214" stroke-width="2"/>
+<text x="345.0" y="298" fill="#542788" font-family="Verdana" font-size="12">0,N</text>
+<line x1="497" y1="483" x2="340" y2="331" stroke="#e08214" stroke-width="2"/>
+<text x="459.972368514" y="441" fill="#542788" font-family="Verdana" font-size="12">0,1</text>
+<g id="association-contest">
+	<path d="M 356 306 a 14 14 90 0 1 14 14 V 331 h -60 V 320 a 14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+	<path d="M 370 331.0 v 11 a 14 14 90 0 1 -14 14 H 324 a 14 14 90 0 1 -14 -14 V 331.0 H 60" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+	<rect x="310" y="306" width="60" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+	<line x1="310" y1="331" x2="370" y2="331" stroke="#e08214" stroke-width="1"/>
+	<text x="317" y="323.7" fill="#000000" font-family="Verdana" font-size="12">contest</text>
+</g>
+
+<!-- Association rank -->
+<line x1="209" y1="483" x2="77" y2="483" stroke="#e08214" stroke-width="2"/>
+<text x="114" y="500.0" fill="#542788" font-family="Verdana" font-size="12">0,1</text>
+<line x1="77" y1="331" x2="77" y2="483" stroke="#e08214" stroke-width="2"/>
+<text x="82.0" y="390" fill="#542788" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-rank">
+	<path d="M 84 458 a 14 14 90 0 1 14 14 V 483 h -42 V 472 a 14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+	<path d="M 98 483.0 v 11 a 14 14 90 0 1 -14 14 H 70 a 14 14 90 0 1 -14 -14 V 483.0 H 42" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+	<rect x="56" y="458" width="42" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+	<line x1="56" y1="483" x2="98" y2="483" stroke="#e08214" stroke-width="1"/>
+	<text x="63" y="475.7" fill="#000000" font-family="Verdana" font-size="12">rank</text>
+</g>
+
+<!-- Association battle -->
+<line x1="209" y1="483" x2="340" y2="483" stroke="#e08214" stroke-width="2"/>
+<text x="283" y="500.0" fill="#542788" font-family="Verdana" font-size="12">0,N</text>
+<line x1="497" y1="483" x2="340" y2="483" stroke="#e08214" stroke-width="2"/>
+<text x="431" y="500.0" fill="#542788" font-family="Verdana" font-size="12">0,1</text>
+<g id="association-battle">
+	<path d="M 351 458 a 14 14 90 0 1 14 14 V 483 h -50 V 472 a 14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+	<path d="M 365 483.0 v 11 a 14 14 90 0 1 -14 14 H 329 a 14 14 90 0 1 -14 -14 V 483.0 H 50" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+	<rect x="315" y="458" width="50" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+	<line x1="315" y1="483" x2="365" y2="483" stroke="#e08214" stroke-width="1"/>
+	<text x="322" y="475.7" fill="#000000" font-family="Verdana" font-size="12">battle</text>
+</g>
+
+<!-- Entity current saison driver -->
+<g id="entity-current saison driver">
+	<g id="frame-current saison driver">
+		<rect x="9" y="86" width="136" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0"/>
+		<rect x="9" y="111.0" width="136" height="93" fill="#d8daeb" stroke="#d8daeb" stroke-width="0"/>
+		<rect x="9" y="86" width="136" height="118" fill="none" stroke="#8073ac" stroke-width="2"/>
+		<line x1="9" y1="111" x2="145" y2="111" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="14" y="103.7" fill="#000000" font-family="Verdana" font-size="12">current saison driver</text>
+	<text x="14" y="128.7" fill="#000000" font-family="Verdana" font-size="12">highest grid position</text>
+	<text x="14" y="145.8" fill="#000000" font-family="Verdana" font-size="12">highest race finish</text>
+	<text x="14" y="162.8" fill="#000000" font-family="Verdana" font-size="12">podiums</text>
+	<text x="14" y="179.8" fill="#000000" font-family="Verdana" font-size="12">wins</text>
+	<text x="14" y="196.8" fill="#000000" font-family="Verdana" font-size="12">points</text>
+</g>
+
+<!-- Entity current saison team -->
+<g id="entity-current saison team">
+	<g id="frame-current saison team">
+		<rect x="11" y="289" width="132" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0"/>
+		<rect x="11" y="314.0" width="132" height="59" fill="#d8daeb" stroke="#d8daeb" stroke-width="0"/>
+		<rect x="11" y="289" width="132" height="84" fill="none" stroke="#8073ac" stroke-width="2"/>
+		<line x1="11" y1="314" x2="143" y2="314" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="16" y="306.7" fill="#000000" font-family="Verdana" font-size="12">current saison team</text>
+	<text x="16" y="331.8" fill="#000000" font-family="Verdana" font-size="12">podiums</text>
+	<text x="16" y="348.8" fill="#000000" font-family="Verdana" font-size="12">wins</text>
+	<text x="16" y="365.8" fill="#000000" font-family="Verdana" font-size="12">points</text>
+</g>
+
+<!-- Entity driver -->
+<g id="entity-driver">
+	<g id="frame-driver">
+		<rect x="271" y="9" width="138" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0"/>
+		<rect x="271" y="34.0" width="138" height="247" fill="#d8daeb" stroke="#d8daeb" stroke-width="0"/>
+		<rect x="271" y="9" width="138" height="272" fill="none" stroke="#8073ac" stroke-width="2"/>
+		<line x1="271" y1="34" x2="409" y2="34" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="322" y="26.7" fill="#000000" font-family="Verdana" font-size="12">driver</text>
+	<text x="276" y="51.7" fill="#000000" font-family="Verdana" font-size="12">driverName</text>
+	<text x="276" y="68.7" fill="#000000" font-family="Verdana" font-size="12">firstname</text>
+	<text x="276" y="85.7" fill="#000000" font-family="Verdana" font-size="12">photo</text>
+	<text x="276" y="102.7" fill="#000000" font-family="Verdana" font-size="12">nationality</text>
+	<text x="276" y="119.7" fill="#000000" font-family="Verdana" font-size="12">birthday</text>
+	<text x="276" y="136.7" fill="#000000" font-family="Verdana" font-size="12">birthday place</text>
+	<text x="276" y="153.8" fill="#000000" font-family="Verdana" font-size="12">number</text>
+	<text x="276" y="170.8" fill="#000000" font-family="Verdana" font-size="12">participations</text>
+	<text x="276" y="187.8" fill="#000000" font-family="Verdana" font-size="12">highest grid position</text>
+	<text x="276" y="204.8" fill="#000000" font-family="Verdana" font-size="12">highest race finish</text>
+	<text x="276" y="221.8" fill="#000000" font-family="Verdana" font-size="12">podiums</text>
+	<text x="276" y="238.8" fill="#000000" font-family="Verdana" font-size="12">wins</text>
+	<text x="276" y="255.8" fill="#000000" font-family="Verdana" font-size="12">points</text>
+	<text x="276" y="272.8" fill="#000000" font-family="Verdana" font-size="12">world championships</text>
+</g>
+
+<!-- Entity race -->
+<g id="entity-race">
+	<g id="frame-race">
+		<rect x="457" y="449" width="80" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0"/>
+		<rect x="457" y="474.0" width="80" height="43" fill="#d8daeb" stroke="#d8daeb" stroke-width="0"/>
+		<rect x="457" y="449" width="80" height="68" fill="none" stroke="#8073ac" stroke-width="2"/>
+		<line x1="457" y1="474" x2="537" y2="474" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="483" y="466.7" fill="#000000" font-family="Verdana" font-size="12">race</text>
+	<text x="462" y="491.8" fill="#000000" font-family="Verdana" font-size="12">date</text>
+	<text x="462" y="508.8" fill="#000000" font-family="Verdana" font-size="12">classement</text>
+</g>
+
+<!-- Entity circuit -->
+<g id="entity-circuit">
+	<g id="frame-circuit">
+		<rect x="441" y="43" width="112" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0"/>
+		<rect x="441" y="68.0" width="112" height="179" fill="#d8daeb" stroke="#d8daeb" stroke-width="0"/>
+		<rect x="441" y="43" width="112" height="204" fill="none" stroke="#8073ac" stroke-width="2"/>
+		<line x1="441" y1="68" x2="553" y2="68" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="478" y="60.7" fill="#000000" font-family="Verdana" font-size="12">circuit</text>
+	<text x="446" y="85.7" fill="#000000" font-family="Verdana" font-size="12">circuitName</text>
+	<text x="446" y="102.7" fill="#000000" font-family="Verdana" font-size="12">country</text>
+	<text x="446" y="119.7" fill="#000000" font-family="Verdana" font-size="12">first time</text>
+	<text x="446" y="136.7" fill="#000000" font-family="Verdana" font-size="12">image</text>
+	<text x="446" y="153.8" fill="#000000" font-family="Verdana" font-size="12">lap record{time</text>
+	<text x="446" y="170.8" fill="#000000" font-family="Verdana" font-size="12">name</text>
+	<text x="446" y="187.8" fill="#000000" font-family="Verdana" font-size="12">year}</text>
+	<text x="446" y="204.8" fill="#000000" font-family="Verdana" font-size="12">laps number</text>
+	<text x="446" y="221.8" fill="#000000" font-family="Verdana" font-size="12">circuit lap lenght</text>
+	<text x="446" y="238.8" fill="#000000" font-family="Verdana" font-size="12">circuit distance</text>
+</g>
+
+<!-- Entity team -->
+<g id="entity-team">
+	<g id="frame-team">
+		<rect x="140" y="398" width="138" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0"/>
+		<rect x="140" y="423.0" width="138" height="145" fill="#d8daeb" stroke="#d8daeb" stroke-width="0"/>
+		<rect x="140" y="398" width="138" height="170" fill="none" stroke="#8073ac" stroke-width="2"/>
+		<line x1="140" y1="423" x2="278" y2="423" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="193" y="415.7" fill="#000000" font-family="Verdana" font-size="12">team</text>
+	<text x="145" y="440.7" fill="#000000" font-family="Verdana" font-size="12">teamName</text>
+	<text x="145" y="457.7" fill="#000000" font-family="Verdana" font-size="12">first time</text>
+	<text x="145" y="474.7" fill="#000000" font-family="Verdana" font-size="12">chief</text>
+	<text x="145" y="491.8" fill="#000000" font-family="Verdana" font-size="12">logo</text>
+	<text x="145" y="508.8" fill="#000000" font-family="Verdana" font-size="12">car image</text>
+	<text x="145" y="525.8" fill="#000000" font-family="Verdana" font-size="12">highest grid position</text>
+	<text x="145" y="542.8" fill="#000000" font-family="Verdana" font-size="12">wins</text>
+	<text x="145" y="559.8" fill="#000000" font-family="Verdana" font-size="12">world championships</text>
+</g>
+</svg>

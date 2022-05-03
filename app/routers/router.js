@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/controller');
-// // Gestion des erreurs
+
+// Gestion des erreurs
 const routerWrapper = require('../middlewares/routerWrapper');
 const handleError = require('../middlewares/handleError');
 
