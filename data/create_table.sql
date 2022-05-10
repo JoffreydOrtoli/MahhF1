@@ -70,6 +70,7 @@ CREATE TABLE IF NOT EXISTS "race" (
     "driver_id" INTEGER NOT NULL REFERENCES "driver"("id"),
     "circuit_id" INTEGER NOT NULL REFERENCES "circuit"("id"),
     "team_id" INTEGER NOT NULL REFERENCES "team"("id"),
+    "best_lap" BOOLEAN NOT NULL,
     "date" DATE NOT NULL,
     "ranking" INTEGER NOT NULL
 );

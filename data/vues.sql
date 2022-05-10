@@ -8,6 +8,7 @@ CREATE VIEW drivers_ranking AS
 	   FROM driver
 		JOIN current_saison_driver ON saison_driver_id = current_saison_driver.id
 		ORDER BY current_saison_driver.points DESC;
+		
 --   Vue classement constructeurs (teams_ranking)
 CREATE VIEW teams_ranking AS
 	SELECT team.name,
@@ -61,6 +62,7 @@ CREATE OR REPLACE FUNCTION new_race(
 	driver_id INT,
 	circuit_id INT,
 	team_id INT,
+	best_lap BOOLEAN,
 	"date" DATE,
 	ranking INT
 ) RETURNS race AS $$
@@ -188,145 +190,45 @@ CREATE OR REPLACE FUNCTION new_race(
 	UPDATE current_saison_driver
 		SET highest_race_finish = ranking
 	WHERE id=driver_id AND ranking < highest_race_finish;
-    INSERT INTO race
-    ("driver_id", "circuit_id", "team_id", "date", "ranking")
-    VALUES(
-		"driver_id",
-		"circuit_id",
-		"team_id",
-		"date",
-		"ranking"
-    ) RETURNING *;
-    $$ LANGUAGE SQL;
-
--- function new_race IF CASE
-
-CREATE OR REPLACE FUNCTION new_race(
-	driver_id INT,
-	circuit_id INT,
-	team_id INT,
-	"date" DATE,
-	ranking INT
-) RETURNS race AS $$
 	UPDATE driver
-		SET highest_race_finish =
-			CASE
-				WHEN ranking>highest_race_finish THEN ranking
-			END
-	WHERE id=driver_id;
+		SET points = points + 1
+	WHERE id=driver_id AND best_lap = true;
+	UPDATE current_saison_driver
+		SET	points = points + 1
+	WHERE id=driver_id AND best_lap = true;
+	UPDATE current_saison_team
+		SET points = points + 1
+	WHERE id=team_id AND best_lap = true;
     INSERT INTO race
-    ("driver_id", "circuit_id", "team_id", "date", "ranking")
+    ("driver_id", "circuit_id", "team_id", "best_lap", "date", "ranking")
     VALUES(
 		"driver_id",
 		"circuit_id",
 		"team_id",
+		"best_lap",
 		"date",
 		"ranking"
     ) RETURNING *;
     $$ LANGUAGE SQL;
-	
-	SELECT * FROM new_race(1, 5, 10, '2022-05-30', 1);
-
-------------------- 
-
-CREATE OR REPLACE FUNCTION new_race(
-	driver_id INT,
-	circuit_id INT,
-	team_id INT,
-	"date" DATE,
-	ranking INT
-) RETURNS race AS $$
-	UPDATE driver
-	SET highest_race_finish = ranking
-	WHERE id=driver_id AND ranking < highest_race_finish;
-    INSERT INTO race
-    ("driver_id", "circuit_id", "team_id", "date", "ranking")
-    VALUES(
-		"driver_id",
-		"circuit_id",
-		"team_id",
-		"date",
-		"ranking"
-    ) RETURNING *;
-    $$ LANGUAGE SQL;
-	
-	SELECT * FROM new_race(1, 5, 10, '2022-05-30', 2);
-
------------------------
-
-CREATE OR REPLACE FUNCTION new_race(
-	driver_id INT,
-	circuit_id INT,
-	team_id INT,
-	"date" DATE,
-	ranking INT
-) RETURNS race AS $$
-DECLARE
-	top_rank INT;
-	BEGIN
-	SELECT highest_race_finish FROM driver WHERE id=driver_id
-		RETURNING highest_race_finish INTO top_rank;
-	IF ranking< top_rank THEN
-			UPDATE driver
-				SET highest_race_finish = ranking;			
-		END IF;
-    INSERT INTO race
-    ("driver_id", "circuit_id", "team_id", "date", "ranking")
-    VALUES(
-		"driver_id",
-		"circuit_id",
-		"team_id",
-		"date",
-		"ranking"
-    ) RETURNING *;
-	END;
-    $$ LANGUAGE plpgsql;
-	
-	SELECT * FROM new_race(1, 5, 10, '2022-05-30', 1);
-
-
--- function new_race base
-
-CREATE OR REPLACE FUNCTION new_race(
-	driver_id INT,
-	circuit_id INT,
-	team_id INT,
-	"date" DATE,
-	ranking INT
-) RETURNS race AS $$
-	UPDATE driver
-	SET wins = wins + 1
-	WHERE id=driver_id;
-    INSERT INTO race
-    ("driver_id", "circuit_id", "team_id", "date", "ranking")
-    VALUES(
-		"driver_id",
-		"circuit_id",
-		"team_id",
-		"date",
-		"ranking"
-    ) RETURNING *;
-    $$ LANGUAGE SQL;
-
 
 -- Lancement fonction add ne race
-SELECT * FROM new_race(1, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(2, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(3, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(4, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(5, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(6, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(7, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(8, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(9, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(10, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(11, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(12, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(13, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(14, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(15, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(16, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(17, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(18, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(19, 5, 10, '2022-05-**', 1);
-SELECT * FROM new_race(20, 5, 10, '2022-05-**', 1);
+SELECT * FROM new_race(1, 5, 10, false, '2022-05-08', 9);
+SELECT * FROM new_race(2, 5, 3, false, '2022-05-08', 11);
+SELECT * FROM new_race(3, 5, 1, false, '2022-05-08', 7);
+SELECT * FROM new_race(4, 5, 2, false, '2022-05-08', 18);
+SELECT * FROM new_race(5, 5, 8, false, '2022-05-08', 6);
+SELECT * FROM new_race(6, 5, 10, false, '2022-05-08', 14);
+SELECT * FROM new_race(7, 5, 5, false, '2022-05-08', 2);
+SELECT * FROM new_race(8, 5, 6, false, '2022-05-08', 16);
+SELECT * FROM new_race(9, 5, 7, false, '2022-05-08', 19);
+SELECT * FROM new_race(10, 5, 3, false, '2022-05-08', 8);
+SELECT * FROM new_race(11, 5, 9, false, '2022-05-08', 4);
+SELECT * FROM new_race(12, 5, 7, false, '2022-05-08', 13);
+SELECT * FROM new_race(13, 5, 8, false, '2022-05-08', 5);
+SELECT * FROM new_race(14, 5, 5, false, '2022-05-08', 3);
+SELECT * FROM new_race(15, 5, 6, false, '2022-05-08', 15);
+SELECT * FROM new_race(16, 5, 4, false, '2022-05-08', 10);
+SELECT * FROM new_race(17, 5, 2, false, '2022-05-08', 12);
+SELECT * FROM new_race(18, 5, 9, true, '2022-05-08', 1);
+SELECT * FROM new_race(19, 5, 4, false, '2022-05-08', 17);
+SELECT * FROM new_race(20, 5, 1, false, '2022-05-08', 20);
