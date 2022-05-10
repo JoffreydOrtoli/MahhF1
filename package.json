@@ -4,7 +4,8 @@
   "description": "Create API for my girlfriend and me to have result and info of F1.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node-dev index.js --no-notify"
   },
   "repository": {
     "type": "git",

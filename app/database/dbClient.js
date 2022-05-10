@@ -1,12 +1,16 @@
 require('dotenv').config();
 
-const { Pool } = require('pg');
 
-const client = new Pool({
-    host: process.env.PGHOST,
-    user: process.env.PGUSER,
-    password: process.env.PGPASSWORD,
-    database: process.env.PGDATABASE
-});
+const {Pool} = require('pg');
+
+const config = {
+    connectionString: process.env.PG_URL
+};
+
+const client = new Pool(config);
+
+client.connect()
+  .then( () => console.log('DB connection is live.'))
+  .catch((err) => console.log('DB connection failed.', err));
 
 module.exports = client;

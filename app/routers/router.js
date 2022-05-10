@@ -8,7 +8,7 @@ const handleError = require('../middlewares/handleError');
 
 router
   .route('/')
-  .get(routerWrapper(controller.getExample));
+  .get(routerWrapper(controller.getDriversAndTeamsRank));
 
 router.use(handleError);
 

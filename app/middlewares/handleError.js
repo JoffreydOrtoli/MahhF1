@@ -1,8 +1,6 @@
-const { json } = require('express/lib/response');
 const APIError = require('./APIError');
 
 const handleError = async (err, req, res, next) => {
-  debug(err);
   if( err instanceof APIError ){
     myError = err;
   }

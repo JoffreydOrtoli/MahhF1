@@ -16,7 +16,7 @@ class APIError extends Error{
     async log(){
         console.error(this.url,this.message,new Date());
 
-        const logPath = path.resolve(__dirname,);
+        const logPath = path.resolve(__dirname, '../logs');
         const fileName = new Date().toISOString().split('T')[0]+'.csv';
 
         // converti notre data en un format avec heure et minute

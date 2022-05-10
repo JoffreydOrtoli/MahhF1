@@ -1,12 +1,12 @@
 require('dotenv').config();
 const dataMapper = require('../database/dataMapper');
 
-const exampleController = {
-  async getExample(req, res) {
-    const result = await dataMapper.getExample;
-    debug(result);
-    res.status(200).json(result);
+const controller = {
+  async getDriversAndTeamsRank(req, res) {
+    const drivers = await dataMapper.getDriversRank();
+    const teams = await dataMapper.getTeamsRank();
+    res.status(200).send({drivers, teams});
   },
 };
 
-module.exports = exampleController;
+module.exports = controller;
