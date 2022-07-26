@@ -2,13 +2,12 @@
 
 BEGIN;
 
-DROP TABLE IF EXISTS "circuit", "current_saison_team", "team", "current_saison_driver", "driver", "race" CASCADE;
+DROP TABLE IF EXISTS "circuit", "current_saison_team", "team", "current_saison_driver", "driver", "race", "qualifying", "qualifying_race" CASCADE;
 
 
 CREATE TABLE IF NOT EXISTS "circuit" (
     "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "name" TEXT NOT NULL,
-    "image" TEXT NOT NULL,
     "country" TEXT NOT NULL,
     "first_time" TEXT NOT NULL,
     "lap_number" INTEGER NOT NULL,
@@ -27,8 +26,6 @@ CREATE TABLE IF NOT EXISTS "current_saison_team" (
 CREATE TABLE IF NOT EXISTS "team" (
     "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "name" TEXT NOT NULL,
-    "logo" TEXT NOT NULL,
-    "car_image" TEXT NOT NULL,
     "first_time" INTEGER NOT NULL,
     "chief" TEXT NOT NULL,
     "wins" INTEGER NOT NULL,
@@ -49,7 +46,6 @@ CREATE TABLE IF NOT EXISTS "driver" (
     "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "name" TEXT NOT NULL,
     "firstname" TEXT NOT NULL,
-    "photo" TEXT NOT NULL,
     "nationality" TEXT NOT NULL,
     "birthday" TEXT NOT NULL,
     "birthday_place" TEXT NOT NULL,
@@ -66,6 +62,26 @@ CREATE TABLE IF NOT EXISTS "driver" (
 );
 
 CREATE TABLE IF NOT EXISTS "race" (
+    "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    "driver_id" INTEGER NOT NULL REFERENCES "driver"("id"),
+    "circuit_id" INTEGER NOT NULL REFERENCES "circuit"("id"),
+    "team_id" INTEGER NOT NULL REFERENCES "team"("id"),
+    "best_lap" BOOLEAN NOT NULL,
+    "date" DATE NOT NULL,
+    "ranking" INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "qualifying_race" (
+    "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    "driver_id" INTEGER NOT NULL REFERENCES "driver"("id"),
+    "circuit_id" INTEGER NOT NULL REFERENCES "circuit"("id"),
+    "team_id" INTEGER NOT NULL REFERENCES "team"("id"),
+    "best_lap" BOOLEAN NOT NULL,
+    "date" DATE NOT NULL,
+    "ranking" INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "qualifying" (
     "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "driver_id" INTEGER NOT NULL REFERENCES "driver"("id"),
     "circuit_id" INTEGER NOT NULL REFERENCES "circuit"("id"),

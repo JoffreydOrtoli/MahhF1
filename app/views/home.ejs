@@ -1,0 +1,30 @@
+<%- include('./partials/header') %>
+    <div id="home_container">
+        <div class="drivers_div">
+            <h2>Classement pilotes</h2>
+            <% let driverRank = 1%>
+            <% for (const driver of drivers) { %>
+                <div class="driver_div">
+                    <h1><%=driverRank%></h1>
+                    <h2><%=driver.firstname%> <%=driver.name%></h2>
+                    <h1><%=driver.points%> points</h1>
+                    <img class="driver_imgs" src="/images/pilotes/<%=driver.number%>.png">
+                    <% driverRank += 1%>
+                </div>
+            <% } %>
+        </div>
+        <div class="teams_div">
+            <h2>Classement constructeurs</h2>
+            <% let teamRank = 1%>
+            <% for (const team of teams) { %>
+                <div class="team_div">
+                    <h2 class="team_ranks"><%=teamRank%></h2>
+                    <img class="team_imgs" src="/images/equipes/minilogo/<%=team.id%>.png">
+                    <h3 class="team_names"><%=team.name%></h3>
+                    <h2 class="team_points"><%=team.points%> points</h2>
+                    <% teamRank += 1%>
+                </div>
+            <% } %>
+        </div>
+    </div>
+<%- include('./partials/footer') %>

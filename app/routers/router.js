@@ -7,8 +7,8 @@ const routerWrapper = require('../middlewares/routerWrapper');
 const handleError = require('../middlewares/handleError');
 
 router
-  .route('/')
-  .get(routerWrapper(controller.getDriversAndTeamsRank));
+  .get('/', routerWrapper(controller.home))
+  .get('/backoffice', routerWrapper(controller.backOffice));
 
 router.use(handleError);
 

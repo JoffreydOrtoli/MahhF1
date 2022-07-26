@@ -16,6 +16,11 @@ const dataMapper = {
       throw new APIError ('NOT FOUND', 404);
     };
     return teams.rows;
+  },
+
+  async getCurrentsDrivers() {
+    const drivers = await client.query('Select * FROM driver JOIN current_saison_driver ON saison_driver_id = current_saison_driver.id ORDER BY current_saison_driver.id asc')
+    return drivers.rows;
   }
 };
 

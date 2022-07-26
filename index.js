@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const path = require('path');
 
 const router = require('./app/routers/router.js');
 
@@ -9,7 +10,7 @@ const app = express();
 app
     .set('view engine', 'ejs')
     .set('views', 'app/views')
-    .use('/statics', express.static('statics'))
+    .use(express.static(path.join(__dirname, '/public')))
     .use(express.urlencoded({ extended: true }))
     .use(router)
     .listen(PORT, () => {

@@ -1,0 +1,52 @@
+body {
+    text-align: center;
+    background-color: #6d6875;
+}
+
+.title {
+    font-size: 3.6em;
+}
+
+#home_container {
+    display: flex;
+    margin-left: 1em;
+    gap: 2em;
+}
+
+.teams_div, .drivers_div {
+    background-color: #fff;
+    border-radius: 0.6em;
+}
+
+.team_div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.team_names {
+    width: 8em;
+    font-size: 1.4em;
+}
+
+.team_imgs {
+    width: 8%;
+}
+
+
+/****************************************************************/
+
+.form_driver {
+    display: flex;
+    gap: 2em;
+    height: 1.8em;
+    align-items: center;
+}
+
+.form_input {
+    width: 5.2em;
+}
+
+.form_test {
+    width: 6em;
+}

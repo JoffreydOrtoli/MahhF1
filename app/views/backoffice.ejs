@@ -1,0 +1,17 @@
+<%- include('./partials/header') %>
+ 
+<form action="" method="post">
+    <% for (const driver of drivers) { %>
+        <div class="form_driver">
+            <div class="form_test"><%= driver.name %></div>
+            <input class="form_input" type="number" name="driverId" readonly="readonly" value="<%= driver.id %>">
+            <input class="form_input" type="number" name="circuitId" placeholder="id circuit">
+            <input class="form_input" type="number" name="teamId" readonly="readonly" placeholder="<%= driver.team_id %>">
+            <input class="input_checkbox" type="checkbox" name="bestLap">
+            <input class="form_input" type="text" name="date" placeholder="date">
+            <input class="form_input" type="number" name="ranking" placeholder="position">
+        </div>
+    <% } %>
+    <input type="submit" value="Valider">
+</form>
+<%- include('./partials/footer') %>
