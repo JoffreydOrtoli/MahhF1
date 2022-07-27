@@ -13,6 +13,18 @@ const controller = {
     res.render('backoffice', {drivers});
   },
 
+  async createNewQualif(req, res) {
+    const qualifRanking = req.body;
+    const results = await dataMapper.qualifRanking(qualifRanking);
+    res.redirect('/backoffice');
+  },
+
+  async createNewRaceQualif(req, res) {
+    const qualifRaceRanking = req.body;
+    const results = await dataMapper.qualifRaceRanking(qualifRaceRanking);
+    res.redirect('/backoffice');
+  },
+
   async createNewRace(req, res) {
     const raceRanking = req.body;
     const results = await dataMapper.raceRanking(raceRanking);

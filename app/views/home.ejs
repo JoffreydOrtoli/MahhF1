@@ -1,7 +1,7 @@
 <%- include('./partials/header') %>
     <div id="home_container">
         <div class="drivers_div">
-            <h2>Classement pilotes</h2>
+            <h2 class="title_classement">Classement pilotes</h2>
             <% let driverRank = 1%>
             <% for (const driver of drivers) { %>
                 <div class="driver_div">
@@ -14,7 +14,7 @@
             <% } %>
         </div>
         <div class="teams_div">
-            <h2>Classement constructeurs</h2>
+            <h2 class="title_classement">Classement constructeurs</h2>
             <% let teamRank = 1%>
             <% for (const team of teams) { %>
                 <div class="team_div">

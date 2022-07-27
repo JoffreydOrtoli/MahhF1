@@ -13,15 +13,27 @@ body {
     gap: 2em;
 }
 
+.title_classement {
+    font-size: 2em;
+}
+
 .teams_div, .drivers_div {
+    border-radius: 0.6em;
+}
+
+.driver_div {
     background-color: #fff;
+    margin-top: 1em;
     border-radius: 0.6em;
 }
 
 .team_div {
+    background-color: #fff;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 1em;
+    border-radius: 0.6em;
 }
 
 .team_names {

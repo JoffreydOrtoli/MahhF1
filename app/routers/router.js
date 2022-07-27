@@ -9,6 +9,8 @@ const handleError = require('../middlewares/handleError');
 router
   .get('/', routerWrapper(controller.home))
   .get('/backoffice', routerWrapper(controller.backOffice))
+  .post('/backoffice/newQualif', routerWrapper(controller.createNewQualif))
+  .post('/backoffice/newRaceQualif', routerWrapper(controller.createNewRaceQualif))
   .post('/backoffice/newRace', routerWrapper(controller.createNewRace));
 
 router.use(handleError);

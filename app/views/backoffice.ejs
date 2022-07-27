@@ -1,4 +1,35 @@
 <%- include('./partials/header') %>
+    <p>Qualification</p>
+    <form action="/backoffice/newQualif" method="post">
+        <% for (const driver of drivers) { %>
+            <div class="form_driver">
+                <div class="form_test"><%= driver.name %></div>
+                <input class="form_input" type="text" name="driver_id" readonly="readonly" value="<%= driver.id %>">
+                <input class="form_input" type="text" name="circuit_id" placeholder="id circuit">
+                <input class="form_input" type="text" name="team_id" readonly="readonly" value="<%= driver.team_id %>">
+                <input class="form_input" type="text" name="best_lap" value="false">
+                <input class="form_input" type="text" name="date" placeholder="date">
+                <input class="form_input" type="text" name="ranking" placeholder="position">
+            </div>
+        <% } %>
+        <input type="submit" value="Valider">
+    </form>
+    <p>Qualification course</p>
+    <form action="/backoffice/newRaceQualif" method="post">
+        <% for (const driver of drivers) { %>
+            <div class="form_driver">
+                <div class="form_test"><%= driver.name %></div>
+                <input class="form_input" type="text" name="driver_id" readonly="readonly" value="<%= driver.id %>">
+                <input class="form_input" type="text" name="circuit_id" placeholder="id circuit">
+                <input class="form_input" type="text" name="team_id" readonly="readonly" value="<%= driver.team_id %>">
+                <input class="form_input" type="text" name="best_lap" value="false">
+                <input class="form_input" type="text" name="date" placeholder="date">
+                <input class="form_input" type="text" name="ranking" placeholder="position">
+            </div>
+        <% } %>
+        <input type="submit" value="Valider">
+    </form>
+    <p>Course</p>
     <form action="/backoffice/newRace" method="post">
         <% for (const driver of drivers) { %>
             <div class="form_driver">
@@ -8,7 +39,7 @@
                 <input class="form_input" type="text" name="team_id" readonly="readonly" value="<%= driver.team_id %>">
                 <input class="form_input" type="text" name="best_lap" value="false">
                 <input class="form_input" type="text" name="date" placeholder="date">
-                <input class="form_input" type="number" name="ranking" placeholder="position">
+                <input class="form_input" type="text" name="ranking" placeholder="position">
             </div>
         <% } %>
         <input type="submit" value="Valider">
