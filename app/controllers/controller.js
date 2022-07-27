@@ -12,6 +12,12 @@ const controller = {
     const drivers = await dataMapper.getCurrentsDrivers();
     res.render('backoffice', {drivers});
   },
+
+  async createNewRace(req, res) {
+    const raceRanking = req.body;
+    const results = await dataMapper.raceRanking(raceRanking);
+    res.redirect('/backoffice');
+  }
 };
 
 module.exports = controller;
