@@ -4,11 +4,28 @@ const { appendFile } = require('fs/promises');
 
 const dataMapper = {
   async getDriversRank() {
-    const drivers = await client.query('SELECT * FROM drivers_ranking');
+    const drivers = await client.query('SELECT * FROM drivers_ranking LIMIT 3');
     if(!drivers){
-      throw new APIError ('NOT FOUND', 404);
+    throw new APIError ('NOT FOUND', 404);
     };
     return drivers.rows;
+  },
+
+  async getAllDriversRank() {
+    const drivers = await client.query('SELECT * FROM drivers_ranking');
+    if(!drivers){
+    throw new APIError ('NOT FOUND', 404);
+    }
+    return drivers.rows;
+  },
+
+  async getDriver(driverId) {
+    const query = {
+      text: 'SELECT * FROM driver WHERE id=$1',
+      values: [driverId]
+    }
+    const driver = await client.query(query);
+    return driver.rows[0];
   },
 
   async getTeamsRank() {

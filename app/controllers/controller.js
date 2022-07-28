@@ -8,6 +8,17 @@ const controller = {
     res.render('home', {drivers, teams});
   },
 
+  async getAllDriversRank(req, res) {
+    const drivers = await dataMapper.getAllDriversRank();
+    res.render('rankdrivers', {drivers});
+  },
+
+  async driverPage(req, res) {
+    const driverId = req.params.driverId;
+    const driver = await dataMapper.getDriver(driverId);
+    res.render('driverpage', {driver});
+  },
+
   async backOffice(req, res) {
     const drivers = await dataMapper.getCurrentsDrivers();
     res.render('backoffice', {drivers});

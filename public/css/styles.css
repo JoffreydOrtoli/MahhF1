@@ -1,11 +1,20 @@
 body {
     text-align: center;
-    background-color: #6d6875;
+    background-color: #5a5a5a;
 }
 
 .title {
-    font-size: 3.6em;
+    font-size: 2.2em;
+    font-weight: 900;
+    text-decoration: none;
+    color: #dc0c02;
 }
+
+a {
+    text-decoration: none;
+}
+
+/******************home**************************/
 
 #home_container {
     display: flex;
@@ -24,7 +33,21 @@ body {
 .driver_div {
     background-color: #fff;
     margin-top: 1em;
+    padding: 0.1em 0;
     border-radius: 0.6em;
+    color: #000;
+}
+
+.button {
+    display: block;
+    font: bold 1em Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    margin-top: 1em;
+    padding: 0.2em 0.4em;
+    border-radius: 0.6em;
+    border: 1px solid #CCCCCC;
 }
 
 .team_div {
@@ -45,8 +68,20 @@ body {
     width: 8%;
 }
 
+/**************************driversrank*******************************************/
 
-/****************************************************************/
+.rank_driver {
+    display: flex;
+    justify-content: space-around;
+    margin: 1em auto;
+    width: 80%;
+}
+
+.rank_driver_imgs {
+    width: 4em;
+}
+
+/*************************backoffice***************************************/
 
 .form_driver {
     display: flex;

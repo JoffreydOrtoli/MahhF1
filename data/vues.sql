@@ -2,7 +2,8 @@ BEGIN;
 
 --  Vue classement pilotes (drivers_ranking)
 CREATE VIEW drivers_ranking AS
-	SELECT driver.name,
+	SELECT driver.id,
+		driver.name,
 		driver.firstname,
 		driver.number,
 		current_saison_driver.points
