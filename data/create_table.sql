@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS "current_saison_team" (
 CREATE TABLE IF NOT EXISTS "team" (
     "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "name" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
     "first_time" INTEGER NOT NULL,
     "chief" TEXT NOT NULL,
     "wins" INTEGER NOT NULL,

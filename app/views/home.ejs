@@ -19,13 +19,15 @@
             <h2 class="title_classement">Classement constructeurs</h2>
             <!-- <% let teamRank = 1%> -->
             <% for (const team of teams) { %>
-                <div class="team_div">
-                    <h2 class="team_ranks"><%=teamRank%></h2>
-                    <img class="team_imgs" src="/images/equipes/minilogo/<%=team.id%>.png">
-                    <h3 class="team_names"><%=team.name%></h3>
-                    <h2 class="team_points"><%=team.points%> points</h2>
-                    <% teamRank += 1%>
-                </div>
+                <a href="/team/<%= team.id %>">
+                    <div class="team_div">
+                        <h2 class="team_ranks"><%=teamRank%></h2>
+                        <img class="team_imgs" src="/images/equipes/minilogo/<%=team.id%>.png">
+                        <h3 class="team_names"><%=team.name%></h3>
+                        <h2 class="team_points"><%=team.points%> points</h2>
+                        <% teamRank += 1%>
+                    </div>
+                </a>
             <% } %>
         </div>
     </div>

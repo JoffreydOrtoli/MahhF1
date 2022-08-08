@@ -10,6 +10,7 @@ router
   .get('/', routerWrapper(controller.home))
   .get('/rankdrivers', routerWrapper(controller.getAllDriversRank))
   .get('/driver/:driverId', routerWrapper(controller.driverPage))
+  .get('/team/:teamId', routerWrapper(controller.teamPage))
   .get('/backoffice', routerWrapper(controller.backOffice))
   .post('/backoffice/newQualif', routerWrapper(controller.createNewQualif))
   .post('/backoffice/newRaceQualif', routerWrapper(controller.createNewRaceQualif))

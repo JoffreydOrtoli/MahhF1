@@ -4,9 +4,9 @@
     <% let driverRank = 1%>
     <% for (const driver of drivers) { %>
         <a href="/driver/<%= driver.id %>">
-            <div class="driver_div rank_driver">
+            <div class="rank_driver">
                 <h2><%=driverRank%></h2>
-                <img class="driver_imgs rank_driver_imgs" src="/images/pilotes/<%=driver.number%>.png">
+                <img class="rank_driver_imgs" src="/images/pilotes/<%=driver.number%>.png">
                 <h2><%=driver.firstname%> <%=driver.name%></h2>
                 <h2><%=driver.points%> points</h2>
                 <% driverRank += 1%>

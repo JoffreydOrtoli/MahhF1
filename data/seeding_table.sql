@@ -37,16 +37,16 @@ INSERT INTO "current_saison_team" ("podiums", "wins", "points") VALUES
 (0, 0, 1);
 
 INSERT INTO "team" ("name", "first_time", "chief", "wins", "world_championships", "saison_team_id") VALUES
-('Alfa Romeo F1 Team', 1993, 'Frédéric Vasseur', 1, 0, 1),
-('Scuderia AlphaTauri', 1985, 'Franz Tost', 2, 0, 2),
-('BWT Alpine F1 Team', 1986, 'Otmar Szafnauer', 21, 2, 3),
-('Aston Martin F1 Team', 2018, 'Mike Krack', 1, 0, 4),
-('Scuderia Ferrari', 1950, 'Mattia Binotto', 241, 16, 5),
-('Haas F1 Team', 2016, 'Guenther Steiner', 0, 0, 6),
-('McLaren F1 Team', 1966, 'Andreas Seidl', 183, 8, 7),
-('Mercedes-AMG Petronas F1 Team', 1970, 'Toto Wolff', 115, 8, 8),
-('Oracle Red Bull Racing', 1997, 'Christian Horner', 77, 4, 9),
-('Williams Racing', 1978, 'Jost Capito', 114, 9, 10);
+('Alfa Romeo', 1993, 'Frédéric Vasseur', 1, 0, 1),
+('AlphaTauri', 1985, 'Franz Tost', 2, 0, 2),
+('Alpine', 1986, 'Otmar Szafnauer', 21, 2, 3),
+('Aston Martin', 2018, 'Mike Krack', 1, 0, 4),
+('Ferrari', 1950, 'Mattia Binotto', 241, 16, 5),
+('Haas', 2016, 'Guenther Steiner', 0, 0, 6),
+('McLaren', 1966, 'Andreas Seidl', 183, 8, 7),
+('Mercedes', 1970, 'Toto Wolff', 115, 8, 8),
+('Red Bull', 1997, 'Christian Horner', 77, 4, 9),
+('Williams', 1978, 'Jost Capito', 114, 9, 10);
 
 INSERT INTO "current_saison_driver" ("highest_grid_position", "highest_race_finish", "podiums", "wins", "points") VALUES
 (14, 10, 0, 0, 1),

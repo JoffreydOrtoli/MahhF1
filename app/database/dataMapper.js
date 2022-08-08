@@ -21,11 +21,20 @@ const dataMapper = {
 
   async getDriver(driverId) {
     const query = {
-      text: 'SELECT * FROM driver WHERE id=$1',
+      text: 'SELECT * FROM driverpage WHERE driverpage.id=$1',
       values: [driverId]
     }
     const driver = await client.query(query);
     return driver.rows[0];
+  },
+
+  async getTeam(teamId) {
+    const query = {
+      text: 'SELECT * FROM teampage WHERE teampage.id=$1',
+      values: [teamId]
+    }
+    const team = await client.query(query);
+    return team.rows;
   },
 
   async getTeamsRank() {

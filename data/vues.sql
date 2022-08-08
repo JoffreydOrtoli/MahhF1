@@ -81,4 +81,37 @@ CREATE VIEW barcelone_race_ranking AS
 		WHERE race.date = '2022-05-22'
 		ORDER BY race.ranking ASC;
 
+CREATE VIEW driverpage AS
+	SELECT driver.id,
+		driver.name,
+		driver.firstname,
+		driver.number,
+		driver.nationality,
+		driver.birthday,
+		driver.birthday_place,
+		driver.participations,
+		driver.highest_grid_position,
+		driver.highest_race_finish,
+		driver.podiums,
+		driver.wins,
+		driver.points,
+		driver.world_championships,
+		driver.team_id,
+		team.name AS team_name
+	   FROM driver
+		JOIN team ON team_id = team.id;
+
+CREATE VIEW teampage AS
+	SELECT team.id,
+		team.name,
+		team.first_time,
+		team.chief,
+		team.wins,
+		team.world_championships,
+		driver.name AS driver_name,
+		driver.firstname AS driver_firstname,
+		driver.number
+	   FROM team
+		JOIN driver ON driver.team_id = team.id;
+
 COMMIT;

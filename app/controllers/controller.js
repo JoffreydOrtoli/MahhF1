@@ -19,6 +19,12 @@ const controller = {
     res.render('driverpage', {driver});
   },
 
+  async teamPage(req, res) {
+    const teamId = req.params.teamId;
+    const team = await dataMapper.getTeam(teamId);
+    res.render('teampage', {team});
+  },
+
   async backOffice(req, res) {
     const drivers = await dataMapper.getCurrentsDrivers();
     res.render('backoffice', {drivers});

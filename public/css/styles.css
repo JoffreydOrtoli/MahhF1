@@ -1,16 +1,35 @@
+@font-face {
+    font-family: 'formulaOne';
+    src: url('../font/Formula1-Bold_web_0.ttf'),
+        url('../font/Formula1-Regular_web_0.ttf'),
+        url('../font/Formula1-Wide_web_0.ttf');
+}
+
 body {
+    font-family: 'formulaOne';
     text-align: center;
-    background-color: #5a5a5a;
+    background-color: #fff;
+}
+
+.title_div {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
 }
 
 .title {
     font-size: 2.2em;
-    font-weight: 900;
+    font-weight: bold;
     text-decoration: none;
-    color: #dc0c02;
+    color: #000;
+}
+
+.title_img {
+    width: 6em;
 }
 
 a {
+    color: #000;
     text-decoration: none;
 }
 
@@ -27,15 +46,15 @@ a {
 }
 
 .teams_div, .drivers_div {
-    border-radius: 0.6em;
+    border-radius: 0.4em;
 }
 
 .driver_div {
-    background-color: #fff;
+    border-top: 0.4em solid red;
+    border-right: 0.4em solid red;
     margin-top: 1em;
     padding: 0.1em 0;
     border-radius: 0.6em;
-    color: #000;
 }
 
 .button {
@@ -51,7 +70,8 @@ a {
 }
 
 .team_div {
-    background-color: #fff;
+    border-top: 0.4em solid red;
+    border-right: 0.4em solid red;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -60,7 +80,7 @@ a {
 }
 
 .team_names {
-    width: 8em;
+    width: 10em;
     font-size: 1.4em;
 }
 
@@ -73,12 +93,35 @@ a {
 .rank_driver {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin: 1em auto;
     width: 80%;
+    background-color: #cacaca;
+    border-radius: 0.2em;
 }
 
 .rank_driver_imgs {
+    margin: 0.2em;
     width: 4em;
+}
+
+/**************************Driver page***********************************/
+
+.div_driver {
+    width: 80%;
+    margin: 4em auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.driver_infos {
+    background-color: #fff;
+    width: 60%;
+    border: 4px solid red;
+}
+
+.driver_imgs {
+    width: 20em;
 }
 
 /*************************backoffice***************************************/
