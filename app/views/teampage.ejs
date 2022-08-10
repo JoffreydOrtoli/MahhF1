@@ -1,9 +1,10 @@
 <%- include('./partials/header') %>
 
-<h1><%= team[0].name %></h1>
-<img src="/images/equipes/logo/<%= team[0].id %>.png ">
-<img src="/images/equipes/voiture/<%= team[0].id %>.png ">
-<table class="driver_infos">
+<div class="team_logo">
+    <img src="/images/equipes/logo/<%= team[0].id %>.png ">
+    <img src="/images/equipes/voiture/<%= team[0].id %>.png ">
+</div>
+<table class="team_infos">
     <tbody>
         <tr>
             <td>Directeur</td>

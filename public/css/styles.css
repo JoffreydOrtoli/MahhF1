@@ -5,23 +5,25 @@
         url('../font/Formula1-Wide_web_0.ttf');
 }
 
+
 body {
     font-family: 'formulaOne';
     text-align: center;
     background-color: #fff;
+    color: #000;
 }
 
 .title_div {
     display: flex;
     align-items: baseline;
     justify-content: center;
+    margin-bottom: 4em;
 }
 
 .title {
     font-size: 2.2em;
     font-weight: bold;
     text-decoration: none;
-    color: #000;
 }
 
 .title_img {
@@ -37,8 +39,7 @@ a {
 
 #home_container {
     display: flex;
-    margin-left: 1em;
-    gap: 2em;
+    justify-content: space-around;
 }
 
 .title_classement {
@@ -57,12 +58,19 @@ a {
     border-radius: 0.6em;
 }
 
+.driver_title {
+    color: #000;
+}
+
+.home_driver_imgs {
+    width: 8em;
+}
+
 .button {
     display: block;
     font: bold 1em Arial;
     text-decoration: none;
     background-color: #EEEEEE;
-    color: #333333;
     margin-top: 1em;
     padding: 0.2em 0.4em;
     border-radius: 0.6em;
@@ -114,14 +122,20 @@ a {
     justify-content: space-between;
 }
 
-.driver_infos {
-    background-color: #fff;
-    width: 60%;
-    border: 4px solid red;
-}
-
 .driver_imgs {
     width: 20em;
+}
+
+/*************************team Page***********************************/
+
+.team_logo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.team_infos {
+    width: 50%;
+    margin: 6em auto;
 }
 
 /*************************backoffice***************************************/

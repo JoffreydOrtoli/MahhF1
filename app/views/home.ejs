@@ -1,14 +1,14 @@
 <%- include('./partials/header') %>
     <div id="home_container">
         <div class="drivers_div">
-            <h2 class="title_classement">Classement pilotes</h2>
+            <h2 class="title_classement ">Classement pilotes</h2>
             <% let driverRank = 1%>
             <% for (const driver of drivers) { %>
                 <a href="/driver/<%= driver.id %>">
                     <div class="driver_div">
-                        <h2><%=driverRank%>. <%=driver.firstname%> <%=driver.name%></h2>
-                        <img class="driver_imgs" src="/images/pilotes/<%=driver.number%>.png">
-                        <h2><%=driver.points%> points</h2>
+                        <h2 class=""><%=driverRank%>. <%=driver.firstname%> <%=driver.name%></h2>
+                        <img class="home_driver_imgs" src="/images/pilotes/<%=driver.number%>.png">
+                        <h2 class=""><%=driver.points%> points</h2>
                         <% driverRank += 1%>
                     </div>
                 </a>
