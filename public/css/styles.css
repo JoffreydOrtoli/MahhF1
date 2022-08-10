@@ -128,13 +128,15 @@ a {
 
 .form_driver {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 2em;
     height: 1.8em;
-    align-items: center;
 }
 
 .form_input {
-    width: 5.2em;
+    text-align: center;
+    width: 6.4em;
 }
 
 .form_test {

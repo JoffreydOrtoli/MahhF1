@@ -1,6 +1,4 @@
 BEGIN;
-
--- add qualif Barcelone
 SELECT new_qualifying(1, 6, 10, false, '2022-05-21', 19);
 SELECT new_qualifying(2, 6, 3, false, '2022-05-21', 17);
 SELECT new_qualifying(3, 6, 1, false, '2022-05-21', 7);
@@ -21,8 +19,6 @@ SELECT new_qualifying(17, 6, 2, false, '2022-05-21', 13);
 SELECT new_qualifying(18, 6, 9, false, '2022-05-21', 2);
 SELECT new_qualifying(19, 6, 4, false, '2022-05-21', 16);
 SELECT new_qualifying(20, 6, 1, false, '2022-05-21', 15);
-
--- add race Barcelone
 SELECT new_race(1, 6, 10, false, '2022-05-22', 18);
 SELECT new_race(2, 6, 3, false, '2022-05-22', 9);
 SELECT new_race(3, 6, 1, false, '2022-05-22', 6);
@@ -43,5 +39,4 @@ SELECT new_race(17, 6, 2, false, '2022-05-22', 10);
 SELECT new_race(18, 6, 9, false, '2022-05-22', 1);
 SELECT new_race(19, 6, 4, false, '2022-05-22', 11);
 SELECT new_race(20, 6, 1, false, '2022-05-22', 19);
-
 COMMIT;
