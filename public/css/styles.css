@@ -13,6 +13,33 @@ body {
     color: #000;
 }
 
+.btn_toggle {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+body.dark {
+    color: #fff;
+    background-color: #000;
+}
+body.dark .btn_toggle {
+    color: #000;
+    background-color: #fff;
+}
+body.dark a {
+    color: #fff;
+}
+
 .title_div {
     display: flex;
     align-items: baseline;
