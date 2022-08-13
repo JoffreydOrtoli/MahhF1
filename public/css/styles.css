@@ -17,8 +17,9 @@ body {
     position: absolute;
     top: 1em;
     right: 1em;
-    width: 3em;
-    height: 3em;
+    width: 2.4em;
+    height: 2.4em;
+    padding: 0.4em;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -38,6 +39,10 @@ body.dark .btn_toggle {
 }
 body.dark a {
     color: #fff;
+}
+
+body.dark .team_imgs {
+    background-color: invert;
 }
 
 .title_div {
