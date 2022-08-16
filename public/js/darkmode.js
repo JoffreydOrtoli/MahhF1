@@ -18,4 +18,5 @@ btnToggle.addEventListener('click', ()=>{
 
 if(localStorage.getItem('darkMode') === 'enabled') {
     document.body.classList.toggle('dark');
+    btnToggle.innerText = 'Light';
 }

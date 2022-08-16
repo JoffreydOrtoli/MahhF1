@@ -47,6 +47,14 @@ const dataMapper = {
     return teams.rows;
   },
 
+  async getCircuits() {
+    const circuits = await client.query('SELECT * FROM circuit');
+    if(!circuits){
+      throw new APIError ('NOT FOUND', 404);
+    };
+    return circuits.rows;
+  },
+
   async getCurrentsDrivers() {
     const drivers = await client.query('SELECT * FROM driver JOIN current_saison_driver ON saison_driver_id = current_saison_driver.id ORDER BY current_saison_driver.id asc')
     return drivers.rows;

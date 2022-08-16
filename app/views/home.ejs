@@ -13,7 +13,7 @@
                     </div>
                 </a>
             <% } %>
-            <a href="/rankdrivers" class="button">Voir tout</a>
+            <a href="/rankdrivers" class="btn_rankdrivers">Voir tout</a>
         </div>
         <div class="teams_div">
             <h2 class="title_classement">Classement constructeurs</h2>
@@ -30,5 +30,14 @@
                 </a>
             <% } %>
         </div>
+    </div>
+    <h2 class="title_circuit">Circuits</h2>
+    <div class="circuits_div">
+        <% for (const circuit of circuits) { %>
+            <div class="circuit_div">
+                <h2><%=circuit.name%></h2>
+                <h3><%=circuit.country%></h3>
+            </div>
+        <% } %>
     </div>
 <%- include('./partials/footer') %>

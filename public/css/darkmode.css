@@ -1,0 +1,27 @@
+body.dark {
+    color: #fff;
+    background-color: #000;
+}
+body.dark .btn_toggle {
+    color: #000;
+    background-color: #fff;
+}
+body.dark a {
+    color: #fff;
+}
+
+body.dark .btn_rankdrivers {
+    color: #000;
+}
+
+body.dark .team_logos {
+    background-color: #fff;
+}
+
+body.dark .rank_driver {
+    background-color: rgb(60, 60, 60);
+}
+
+body.dark .circuit_div {
+    background-color: rgb(60, 60, 60);
+}

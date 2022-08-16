@@ -5,7 +5,8 @@ const controller = {
   async home(req, res) {
     const drivers = await dataMapper.getDriversRank();
     const teams = await dataMapper.getTeamsRank();
-    res.render('home', {drivers, teams});
+    const circuits = await dataMapper.getCircuits();
+    res.render('home', {drivers, teams, circuits});
   },
 
   async getAllDriversRank(req, res) {

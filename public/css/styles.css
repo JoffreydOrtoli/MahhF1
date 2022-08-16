@@ -5,12 +5,26 @@
         url('../font/Formula1-Wide_web_0.ttf');
 }
 
-
 body {
     font-family: 'formulaOne';
     text-align: center;
     background-color: #fff;
     color: #000;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    height:3.4px;
+    width: 3.4px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3d4852;
+    border-radius: 3px;
 }
 
 .btn_toggle {
@@ -27,22 +41,6 @@ body {
     background-color: #000;
     color: #fff;
     cursor: pointer;
-}
-
-body.dark {
-    color: #fff;
-    background-color: #000;
-}
-body.dark .btn_toggle {
-    color: #000;
-    background-color: #fff;
-}
-body.dark a {
-    color: #fff;
-}
-
-body.dark .team_imgs {
-    background-color: invert;
 }
 
 .title_div {
@@ -98,7 +96,7 @@ a {
     width: 8em;
 }
 
-.button {
+.btn_rankdrivers {
     display: block;
     font: bold 1em Arial;
     text-decoration: none;
@@ -128,6 +126,32 @@ a {
     width: 8%;
 }
 
+.title_circuit {
+    margin-top: 2em;
+    font-size: 2em;
+}
+
+.circuits_div {
+    display: flex;
+    overflow-x: scroll;
+    cursor: pointer;
+}
+
+.circuits_div.active {
+    cursor: grabbing;
+}
+
+.circuit_div {
+    margin: 0.8em;
+    padding: 2em;
+    background-color: #EEEEEE;
+    border-radius: 0.4em;
+}
+
+.circuits_div::-webkit-scrollbar {
+    display: none;
+}
+
 /**************************driversrank*******************************************/
 
 .rank_driver {
@@ -136,7 +160,7 @@ a {
     align-items: center;
     margin: 1em auto;
     width: 80%;
-    background-color: #cacaca;
+    background-color: #EEEEEE;
     border-radius: 0.2em;
 }
 
@@ -158,9 +182,9 @@ a {
     width: 20em;
 }
 
-/*************************team Page***********************************/
+/*************************Team Page***********************************/
 
-.team_logo {
+.team_logos {
     display: flex;
     justify-content: space-around;
 }
@@ -170,7 +194,7 @@ a {
     margin: 6em auto;
 }
 
-/*************************backoffice***************************************/
+/*************************Backoffice***************************************/
 
 .form_driver {
     display: flex;
